@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+ <script  type="text/javascript" charset="utf-8" async defer>
+  var a=Math.PI;//3.141592653589793
+  //var str=k;
+  //document.write(a);
+  //var n=str.slice(3,17)
+  //document.write(n);
+  var c=a.toString().split(".")[0]; ///before
+  var k=a.toString().split(".")[1]; ///after
+  var b=k.length;
+  var number=prompt("enter the number of digit you want to see after the decimal")
+  if(number>b)
+  {
+    document.write("enter number can't exceed 15");
+  }
+  else
+  {  document.write(c+".");
+    for(var i=0;i<number;i++)
+      document.write(k[i]);
+  }
+</script>
+
+</body>
+</html>
