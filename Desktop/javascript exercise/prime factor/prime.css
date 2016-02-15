@@ -1,0 +1,27 @@
+body{
+  text-align:center;
+  color:#eeeeee;
+  /*background-color: red;*/
+  background-image: url(pic.jpg);
+  font-size:30px;
+}
+
+form{
+  position:absolute;
+  top: 30%;
+  left:40%;
+}
+#button{
+  margin-top:50px;
+}
+#answer{
+
+  margin-top:20px;
+  z-index:2;
+}
+#button {
+    background-color: #eeeeee;
+    width: 10em;
+    height: 2em;
+}
+

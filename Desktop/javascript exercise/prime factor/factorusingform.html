@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="prime.css">
+  <script  type="text/javascript" charset="utf-8" async defer>
+  function prime()
+  {
+   var n = document.getElementById("number").value;
+   var flag;
+   var flag1=0;
+   if (isNaN(n))
+   {
+    document.getElementById("answer").innerHTML="please enter a number";
+   }
+   else {
+   for(var i=2;i<=n/2;i++)
+   {           //document.write(" factor is"+ i +"<br/>");
+      flag=0;
+     if(n%i==0)
+      { flag1++;
+        for(var j=2;j<=i/2;j++)
+        {
+          if(i%j==0)
+          {
+          flag++;
+          break;
+          }
+        }
+        if(flag==0)
+        {
+          //document.write(" prime factor is"+ i +"<br/>");
+          document.getElementById("answer").innerHTML +="prime factor is " + i +"<br/>";
+          //alert(" factor is"+ i +"<br/>");
+        }
+      }
+   }
+   if(flag1==0)
+    {
+      //document.write( n+" is a prime number <br/>");
+      document.getElementById("answer").innerHTML =n+"is a prime number";
+
+    }
+   }}
+  </script>
+</head>
+<body>
+    <h1>enter a number to find its prime factorial</h1>
+  <form id="form">
+   enter the number <input type="textbox" name="text1" type="text" id="number" placeholder="enter your number here"><br/>
+   <input type="button" type="button" value="submit" name="button" onclick="prime()" id="button">
+   <div id="answer">
+
+   </div>
+  </form>
+</body>
+</html>
