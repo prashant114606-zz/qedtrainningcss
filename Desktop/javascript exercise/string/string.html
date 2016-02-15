@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="string.css">
+  <script  type="text/javascript" charset="utf-8" async defer>
+   //ttvmswxjzdgzqxotby_lslonwqaipchgqdo_yz_fqdagixyrobdjtnl_jqzpptzfcdcjjcpjjnnvopmh
+  var a=new Array();
+  function unique(str)
+     {   //var str=document.getElementById("number").value;
+         //var str=prompt("enter the string","");
+         //function call(){
+         var flag=0;
+         var index;
+         //var a=new Array();
+         var k=0;
+         var newstr;
+         //document.write(str.length);
+         for(var i=0;i<str.length;i++)
+             {
+                 a[k]=str.lastIndexOf(str[i]);
+                 if(a[k]==i)
+                     {
+                        a[k]=0;
+                     }
+                 k++;
+                 //document.write(a);
+              }
+                //document.write(a);
+         for(i=0;i<=k;i++)
+             {
+                  if(a[i]!=0)
+                     {
+                        flag++;
+                        break;
+                     }
+             }
+         //document.write(flag);
+         if(flag==1)
+             {
+                 var maxindex=Math.max.apply(Math,a);
+                 //var maxindex=Math.max.apply(null, a);
+                 //var maxindex=Math.max(a);
+                 //document.write(maxindex);
+                 //document.getElementById("answer").innerHTML=a;
+                  for(i=0;i<str.length;i++)
+                     {
+                         if(a[i]==maxindex)
+                             {
+                                 index=i;
+                                 //break;
+                             }
+
+                     }
+                 //document.write(index);
+                 var x=str.slice(0,index);
+                 //var y=str.slice(index+1,maxindex-index-1);
+                 var y=str.slice(index+1,maxindex);
+                 var z=str.slice(maxindex+1,str.length);
+                 //var z=str.slice(0,index-1);
+                 //var trim=str.slice(index,index);
+                 str =x+y+z+str[index];
+                 //document.write(str);
+                 unique(str);
+              }
+         //document.write(str);
+         /* for(i=index;i<maxindex;i++)
+         {
+          str[]
+         }*/
+         // }
+  /* for(i=0;i<str.length;i++)
+   {
+    if(a[i]!=0)
+    {
+      flag++;
+    }
+   }
+   if(flag==0)
+    {
+       document.write(str);
+    }
+    else{
+   unique(str);
+ }*/
+ else
+ {
+ {for(i=0;i<str.length;i++)
+  {  if(str[i]=='_')
+     { newstr=i;
+      break;}
+      else{
+        newstr=str.length;
+      }
+
+  }
+  }
+  //document.write(str.slice(0,newstr));
+  console.log(str.slice(0,newstr));
+  //document.write(str);
+    }
+
+ }
+
+  </script>
+</head>
+<body>
+  <h1>String manipulation </h1>
+  <form>
+   enter the string  <input type="textbox" name="text1" type="text" id="number" placeholder="enter your number here"><br/>
+   <input type="button" type="button" value="submit" name="button" onclick="unique(document.getElementById('number').value);" id="button">
+   <div id="answer">
+
+   </div>
+  </form>
+</body>
+</html>

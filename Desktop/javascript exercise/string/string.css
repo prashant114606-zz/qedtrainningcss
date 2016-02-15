@@ -1,0 +1,12 @@
+body{
+  text-align:center;
+  color:#eeeeee;
+  /*background-color: red;*/
+  background-image: url(kk.jpg);
+  font-size:30px;
+}
+#button {
+    background-color: #eeeeee;
+    width: 10em;
+    height: 2em;
+}
