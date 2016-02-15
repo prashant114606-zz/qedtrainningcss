@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="prime.css">
+  <script  type="text/javascript" charset="utf-8" async defer>
+  function pie()
+  {
+  var a=Math.PI;//3.141592653589793
+  var n =document.getElementById("number").value;
+  if(n>15)
+  {
+    //document.write("enter number can't exceed 15");
+    document.getElementById("answer").innerHTML="number can't exceed 15";
+  }
+  else
+  {
+      document.getElementById("answer").innerHTML=(a.toFixed(n));
+  }
+  //var str=k;
+  //document.write(a);
+  //var n=str.slice(3,17)
+  //document.write(n);
+  /*var c=a.toString().split(".")[0]; ///before
+  var k=a.toString().split(".")[1]; ///after
+  var b=k.length;
+  //var number=prompt("enter the number of digit you want to see after the decimal")
+  var n =document.getElementById("number").value;
+  if(n>b)
+  {
+    //document.write("enter number can't exceed 15");
+    document.getElementById("answer").innerHTML="number can't exceed 15";
+  }
+  else
+  {  //document.write(c+".");
+     document.getElementById("answer").innerHTML=c+".";
+    for(var i=0;i<n;i++)
+     // document.write(k[i]);
+     document.getElementById("answer").innerHTML+=k[i];
+  }*/
+}
+  </script>
+</head>
+<body>
+  <h1>enter a number to find PI to the Nth Digit</h1>
+  <form>
+   enter the number  <input type="textbox" name="text1" type="text" id="number" placeholder="enter your number here"><br/>
+   <input type="button" type="button" value="submit" name="button" onclick="pie()" id="button">
+   <div id="answer">
+
+   </div>
+  </form>
+</body>
+</html>
